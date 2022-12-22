@@ -61,7 +61,7 @@ class Menu extends Component {
                         </Media>
                         <Media body className="ml-5">
                             <Media heading>{dish.name}
-                                <span className="ml-2 badge badge-pill bg-danger">
+                                <span className="ml-3 badge badge-pill bg-danger">
                                     ${dish.price}
                                 </span>
                             </Media>
