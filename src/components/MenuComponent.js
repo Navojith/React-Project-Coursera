@@ -60,7 +60,11 @@ class Menu extends Component {
                             <Media object src={dish.image} alt={dish.name} />
                         </Media>
                         <Media body className="ml-5">
-                            <Media heading>{dish.name}</Media>
+                            <Media heading>{dish.name}
+                                <span className="ml-3 badge badge-pill bg-danger">
+                                    ${dish.price}
+                                </span>
+                            </Media>
                             <p>{dish.description}</p>
                         </Media>
                     </Media>
