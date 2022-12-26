@@ -52,7 +52,6 @@ class DishDetail extends Component {
                     <h3>Comments</h3>
                     { com }
                 </div>
-                
             );
         }
         else {
