@@ -10,8 +10,8 @@ class DishDetail extends Component {
     }
 
     renderDish() {
-        if(this.props.selectedDish != null) {
-            const {name, image, price, description } = this.props.selectedDish;
+        if(this.props.dish != null) {
+            const {name, image, price, description } = this.props.dish;
       
             return(
                 <Card>
@@ -36,13 +36,13 @@ class DishDetail extends Component {
     }
 
     renderComments() {
-        if(this.props.selectedDish != null) {
+        if(this.props.dish != null) {
 
-            const com = this.props.selectedDish.comments.map((c) => { return(
+            const com = this.props.dish.comments.map((c) => { return(
                 <div key={c.id}>
                     <p>
                         {c.comment} <br /><br />
-                        -- {c.author} , {c.date}<br />
+                        -- {c.author} , {new Intl.DateTimeFormat('en-Us', { year: 'numeric', month: 'short', day:'2-digit' }).format(new Date(Date.parse(c.date)))}<br />
                     </p>
                 </div>
             )});
