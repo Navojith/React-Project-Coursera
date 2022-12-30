@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Home from './HomeComponent';
+import Contact from './ContactComponent';
 import Menu from './MenuComponent';
 import DishDetail from './DishdetailComponent';
 import Header from './HeaderComponent';
@@ -29,7 +30,9 @@ class Main extends Component {
       <div>
         <Header />
         <Switch>
+          {/*3 different ways*/}
           <Route path="/home" component={HomePage} />
+          <Route exact path="/contactus" component={Contact} />
           <Route exact path="/menu" component={() => <Menu dishes={this.state.dishes} />} />
           <Redirect to="/home" />
         </Switch>
